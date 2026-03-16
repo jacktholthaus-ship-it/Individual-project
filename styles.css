@@ -161,34 +161,22 @@ body {
 .tips-layout {
   display: flex;
   gap: 40px;
-  align-items: stretch;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
-.tips-left,
-.tips-right {
+.tips-left {
   flex: 1;
   min-width: 320px;
-  color: #1f1f1f;
-  box-sizing: border-box;
 }
 
-.tips-left h2,
-.tips-right h2,
-.tips-left h3,
-.tips-right h3,
-.tips-left p,
-.tips-right p,
-.tips-left li,
-.tips-right li,
-.tips-left ul,
-.tips-right ul,
-.tips-left ol,
-.tips-right ol {
-  color: #1f1f1f;
+.tips-right {
+  flex: 1;
+  min-width: 280px;
 }
 
 .tips-right h3 {
+  color: #1d4e89;
   margin-top: 0;
   margin-bottom: 12px;
 }
@@ -204,7 +192,6 @@ body {
 .right-column {
   flex: 1;
   min-width: 320px;
-  width: auto;
   color: #1f1f1f;
   box-sizing: border-box;
 }
@@ -268,6 +255,16 @@ a:hover {
 }
 
 @media (max-width: 900px) {
+  .left-column,
+  .right-column {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .right-column {
+    margin-top: 20px;
+  }
+
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -277,20 +274,7 @@ a:hover {
     font-size: 36px;
   }
 
-  .tips-layout,
-  .two-column-box {
+  .tips-layout {
     flex-direction: column;
-  }
-
-  .left-column,
-  .right-column,
-  .tips-left,
-  .tips-right {
-    width: 100%;
-    min-width: 100%;
-  }
-
-  .right-column {
-    margin-top: 20px;
   }
 }
