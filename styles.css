@@ -181,23 +181,31 @@ body {
   margin-bottom: 12px;
 }
 
+/* FIXED TWO COLUMN SECTION */
 .two-column-box {
   display: flex;
   gap: 40px;
   align-items: stretch;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .left-column,
 .right-column {
   flex: 1;
-  min-width: 320px;
+  min-width: 0;
   color: #1f1f1f;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .left-column h2,
-.right-column h2,
+.right-column h2 {
+  color: #1f1f1f;
+  font-size: 32px;
+  margin: 0 0 25px 0;
+}
+
 .left-column h3,
 .right-column h3,
 .left-column p,
@@ -209,6 +217,13 @@ body {
 .left-column ol,
 .right-column ol {
   color: #1f1f1f;
+}
+
+.left-column ol,
+.right-column ol,
+.left-column ul,
+.right-column ul {
+  margin-top: 0;
 }
 
 .right-column ul {
@@ -255,16 +270,6 @@ a:hover {
 }
 
 @media (max-width: 900px) {
-  .left-column,
-  .right-column {
-    width: 100%;
-    min-width: 100%;
-  }
-
-  .right-column {
-    margin-top: 20px;
-  }
-
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -276,5 +281,19 @@ a:hover {
 
   .tips-layout {
     flex-direction: column;
+  }
+
+  .two-column-box {
+    flex-wrap: wrap;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .right-column {
+    margin-top: 20px;
   }
 }
