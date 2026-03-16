@@ -161,38 +161,67 @@ body {
 .tips-layout {
   display: flex;
   gap: 40px;
-  align-items: flex-start;
+  align-items: stretch;
   flex-wrap: wrap;
 }
 
-.tips-left {
-  flex: 1;
-  min-width: 320px;
-}
-
+.tips-left,
 .tips-right {
   flex: 1;
-  min-width: 280px;
+  min-width: 320px;
+  color: #1f1f1f;
+  box-sizing: border-box;
+}
+
+.tips-left h2,
+.tips-right h2,
+.tips-left h3,
+.tips-right h3,
+.tips-left p,
+.tips-right p,
+.tips-left li,
+.tips-right li,
+.tips-left ul,
+.tips-right ul,
+.tips-left ol,
+.tips-right ol {
+  color: #1f1f1f;
 }
 
 .tips-right h3 {
-  color: #1d4e89;
   margin-top: 0;
   margin-bottom: 12px;
 }
 
 .two-column-box {
-  overflow: hidden;
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 
-.left-column {
-  float: left;
-  width: 48%;
-}
-
+.left-column,
 .right-column {
-  float: right;
-  width: 48%;
+  flex: 1;
+  min-width: 320px;
+  width: auto;
+  color: #1f1f1f;
+  box-sizing: border-box;
+}
+
+.left-column h2,
+.right-column h2,
+.left-column h3,
+.right-column h3,
+.left-column p,
+.right-column p,
+.left-column li,
+.right-column li,
+.left-column ul,
+.right-column ul,
+.left-column ol,
+.right-column ol {
+  color: #1f1f1f;
 }
 
 .right-column ul {
@@ -239,16 +268,6 @@ a:hover {
 }
 
 @media (max-width: 900px) {
-  .left-column,
-  .right-column {
-    float: none;
-    width: 100%;
-  }
-
-  .right-column {
-    margin-top: 20px;
-  }
-
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -258,7 +277,20 @@ a:hover {
     font-size: 36px;
   }
 
-  .tips-layout {
+  .tips-layout,
+  .two-column-box {
     flex-direction: column;
+  }
+
+  .left-column,
+  .right-column,
+  .tips-left,
+  .tips-right {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .right-column {
+    margin-top: 20px;
   }
 }
