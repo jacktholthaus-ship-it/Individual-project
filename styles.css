@@ -176,12 +176,10 @@ body {
 }
 
 .tips-right h3 {
-  color: #1d4e89;
-  margin-top: 0;
-  margin-bottom: 12px;
+  color: #1f1f1f;
+  margin-top: 28px;
 }
 
-/* FIXED TWO COLUMN SECTION */
 .two-column-box {
   display: flex;
   gap: 40px;
