@@ -165,6 +165,29 @@ body {
   margin: 0 16px 18px 16px;
 }
 
+.tips-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.tips-left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.tips-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.tips-right h3 {
+  color: #1d4e89;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
 .two-column-box {
   overflow: hidden;
 }
