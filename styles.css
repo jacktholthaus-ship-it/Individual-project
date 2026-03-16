@@ -6,6 +6,10 @@ body {
   line-height: 1.6;
 }
 
+.index-body {
+  background-color: #f5f1ea;
+}
+
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
     url("images/paris.banner.jpg");
@@ -13,13 +17,6 @@ body {
   background-position: center center;
   color: white;
   padding-bottom: 45px;
-}
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 60px 20px 20px 20px;
 }
 
 .navbar {
@@ -63,7 +60,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  padding: 90px 20px 20px 20px;
+  padding: 60px 20px 20px 20px;
 }
 
 .hero-content h1 {
@@ -110,26 +107,22 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-.about-box {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.about-text {
-  flex: 1 1 420px;
-}
-
-.about-image {
-  flex: 1 1 280px;
+.map-box {
   text-align: center;
 }
 
-.about-image img {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
+.map-content {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.map-image {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 12px;
 }
 
 .card-row {
@@ -263,5 +256,9 @@ a:hover {
 
   .hero-content h1 {
     font-size: 36px;
+  }
+
+  .tips-layout {
+    flex-direction: column;
   }
 }
